@@ -680,8 +680,8 @@ function openDetail(no){
   document.getElementById('mpm').textContent=(d.pm?Number(d.pm).toLocaleString('ja-JP')+' 点（性能'+(d.rank||'-')+'／数字が大きいほど速い）':'—');
   document.getElementById('mmem').textContent=(d.mem||'—')+'GB（ふつうに使うなら十分）';
   const g=Number(d.ssd)||0;
-  const ph=Math.round(g*1024/3/1000)*1000;
-  document.getElementById('mssd').textContent=g+'GB（写真なら約'+ph.toLocaleString('ja-JP')+'枚。スマホの'+(g/256).toFixed(g%256?1:0)+'倍）';
+  const pcount=Math.round(g*1024/3/1000)*1000;
+  document.getElementById('mssd').textContent=g+'GB（写真なら約'+pcount.toLocaleString('ja-JP')+'枚。スマホの'+(g/256).toFixed(g%256?1:0)+'倍）';
   document.getElementById('minch').textContent=(d.inch||'—')+'インチ';
   const wv=Number(d.wt);
   document.getElementById('mwt').textContent=w2(d.wt)+(wv>0?(wv<1.5?'（毎日持ち歩ける軽さ）':wv<1.7?'（持ち歩きはふつう）':'（据え置き向き）'):'');
