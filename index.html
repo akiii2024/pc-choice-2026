@@ -50,6 +50,12 @@
   th,td{padding:9px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
   th{color:var(--dim);font-weight:600;font-size:.76rem;position:sticky;top:0;background:#12171d;white-space:nowrap}
   tbody tr:hover{background:#1b2229}
+  .img-cell{width:64px;padding:6px 4px}
+  .img-cell img{width:58px;height:44px;object-fit:contain;display:block;background:#0d1116;border-radius:6px}
+  .noimg{display:block;width:58px;height:44px;border-radius:6px;background:#0d1116;border:1px dashed #2f3944}
+  .pimg{background:#0d1116;border-radius:12px;margin:12px 0 0;padding:10px;text-align:center}
+  .pimg img{width:100%;max-width:420px;height:auto;display:block;margin:0 auto}
+  .pcap{color:#7f8fa0;font-size:.72rem;margin-top:6px}
   .price-cell{white-space:nowrap;font-weight:700}
   .name-cell b{font-size:.72rem;color:var(--dim);text-transform:uppercase;letter-spacing:.04em;display:block}
   .m{display:block;color:#7f8fa0;font-size:.72rem;font-family:ui-monospace,Menlo,monospace}
@@ -67,7 +73,8 @@
   .tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:14px;background:var(--card)}
   @media(max-width:700px){
     .cpu-cell,.store-cell{display:none}
-    th:nth-child(3),td:nth-child(3),th:nth-child(8),td:nth-child(8){display:none}
+    th:nth-child(8),td:nth-child(8){display:none}
+    .img-cell{width:52px} .img-cell img,.noimg{width:46px;height:36px}
   }
 </style>
 </head>
@@ -91,6 +98,7 @@
 
     <article class="pick a">
       <div class="tag">性能がいちばん</div>
+      <div class="pimg"><img src="assets/card/12.jpg" alt="acer Aspire Lite 15" loading="lazy"></div><div class="pcap">※同シリーズ(AL15-42P)の外観</div>
       <h3>acer Aspire Lite 15</h3>
       <div class="model">AL15-72P-N76ZHARE/F</div>
       <div class="price"><span>¥</span>129,800<small>税込</small></div>
@@ -99,6 +107,7 @@
     </article>
     <article class="pick a">
       <div class="tag">14型・性能A</div>
+      <div class="pimg"><img src="assets/card/28.jpg" alt="Dell 14" loading="lazy"></div>
       <h3>Dell 14</h3>
       <div class="model">MCL54-FHHB</div>
       <div class="price"><span>¥</span>144,800<small>税込</small></div>
@@ -107,6 +116,7 @@
     </article>
     <article class="pick a">
       <div class="tag">軽い・性能A</div>
+      <div class="pimg"><img src="assets/card/25.jpg" alt="NEC LAVIE Smart N13 Slim" loading="lazy"></div>
       <h3>NEC LAVIE Smart N13 Slim</h3>
       <div class="model">PC-SE32B48D3-D</div>
       <div class="price"><span>¥</span>144,800<small>税込</small></div>
@@ -115,6 +125,7 @@
     </article>
     <article class="pick b">
       <div class="tag">無難・軽め</div>
+      <div class="pimg"><img src="assets/card/26.jpg" alt="NEC LAVIE N15 Slim N1555" loading="lazy"></div>
       <h3>NEC LAVIE N15 Slim N1555</h3>
       <div class="model">PC-N1555GAB2</div>
       <div class="price"><span>¥</span>144,700<small>税込</small></div>
@@ -144,9 +155,10 @@
 </div>
 <div class="tbl-wrap">
 <table id="tbl">
-  <thead><tr><th>価格</th><th>機種 / 型番</th><th>CPU</th><th>性能</th><th>重量</th><th>画面</th><th>SSD</th><th>店</th></tr></thead>
+  <thead><tr><th></th><th>価格</th><th>機種 / 型番</th><th>CPU</th><th>性能</th><th>重量</th><th>画面</th><th>SSD</th><th>店</th></tr></thead>
   <tbody>
       <tr data-rank="C" data-price="109800" data-pm="10696" data-wt="1.72" data-judge="△条件付き">
+        <td class="img-cell"><img src="assets/thumb/1.jpg" alt="" loading="lazy"></td>
         <td class="price-cell">¥109,800</td>
         <td class="name-cell"><b>ACER</b> Aspire Lite 15<span class="m">AL15-41P-H36UJARE/F</span></td>
         <td class="cpu-cell">Ryzen 3 5400U</td>
@@ -157,6 +169,7 @@
         <td class="store-cell">ジョーシン</td>
       </tr>
       <tr data-rank="B" data-price="119800" data-pm="16273" data-wt="1.55" data-judge="△条件付き">
+        <td class="img-cell"><span class="noimg"></span></td>
         <td class="price-cell">¥119,800</td>
         <td class="name-cell"><b>LENOVO</b> IdeaPad Slim 3x Gen 10<span class="m">83N3001KJP</span></td>
         <td class="cpu-cell">Snapdragon X X1-26-100</td>
@@ -167,6 +180,7 @@
         <td class="store-cell">ジョーシン</td>
       </tr>
       <tr data-rank="B" data-price="126947" data-pm="16273" data-wt="1.55" data-judge="△条件付き">
+        <td class="img-cell"><span class="noimg"></span></td>
         <td class="price-cell">¥126,947</td>
         <td class="name-cell"><b>LENOVO</b> IdeaPad Slim 3x Gen 10<span class="m">83N3001KJP</span></td>
         <td class="cpu-cell">Snapdragon X X1-26-100</td>
@@ -177,6 +191,7 @@
         <td class="store-cell">ケーズデンキ</td>
       </tr>
       <tr data-rank="A" data-price="129800" data-pm="23136" data-wt="1.78" data-judge="◎推奨">
+        <td class="img-cell"><img src="assets/thumb/12.jpg" alt="" loading="lazy"></td>
         <td class="price-cell">¥129,800</td>
         <td class="name-cell"><b>ACER</b> Aspire Lite 15<span class="m">AL15-72P-N76ZHARE/F</span></td>
         <td class="cpu-cell">Core i7-13620H</td>
@@ -187,6 +202,7 @@
         <td class="store-cell">ジョーシン</td>
       </tr>
       <tr data-rank="C" data-price="129800" data-pm="10936" data-wt="2.2" data-judge="◎推奨">
+        <td class="img-cell"><img src="assets/thumb/24.jpg" alt="" loading="lazy"></td>
         <td class="price-cell">¥129,800</td>
         <td class="name-cell"><b>NEC</b> LAVIE N16 N1635/KAW<span class="m">PC-N1635KAW</span></td>
         <td class="cpu-cell">Core i3-1315U</td>
@@ -197,6 +213,7 @@
         <td class="store-cell">PC DEPOT</td>
       </tr>
       <tr data-rank="B" data-price="134800" data-pm="15032" data-wt="1.72" data-judge="◎推奨">
+        <td class="img-cell"><img src="assets/thumb/6.jpg" alt="" loading="lazy"></td>
         <td class="price-cell">¥134,800</td>
         <td class="name-cell"><b>ACER</b> Aspire Lite 15<span class="m">AL15-42P-H56ZJARE/F</span></td>
         <td class="cpu-cell">Ryzen 5 7430U</td>
@@ -207,6 +224,7 @@
         <td class="store-cell">ジョーシン</td>
       </tr>
       <tr data-rank="B" data-price="139800" data-pm="16273" data-wt="1.49" data-judge="△条件付き">
+        <td class="img-cell"><img src="assets/thumb/16.jpg" alt="" loading="lazy"></td>
         <td class="price-cell">¥139,800</td>
         <td class="name-cell"><b>ASUS</b> Vivobook 14<span class="m">X1407QA-PU165W</span></td>
         <td class="cpu-cell">Snapdragon X X1-26-100</td>
@@ -217,6 +235,7 @@
         <td class="store-cell">ビックカメラ</td>
       </tr>
       <tr data-rank="C" data-price="142780" data-pm="12967" data-wt="99" data-judge="◎推奨">
+        <td class="img-cell"><span class="noimg"></span></td>
         <td class="price-cell">¥142,780</td>
         <td class="name-cell"><b>DELL</b> Dell 15 DC15250<span class="m">ND65-GHM3BK</span></td>
         <td class="cpu-cell">Core i5-1334U</td>
@@ -227,6 +246,7 @@
         <td class="store-cell">ヤマダ</td>
       </tr>
       <tr data-rank="B" data-price="144700" data-pm="13735" data-wt="1.65" data-judge="◎推奨">
+        <td class="img-cell"><img src="assets/thumb/26.jpg" alt="" loading="lazy"></td>
         <td class="price-cell">¥144,700</td>
         <td class="name-cell"><b>NEC</b> LAVIE N15 Slim N1555/GAB2<span class="m">PC-N1555GAB2</span></td>
         <td class="cpu-cell">Core i5-1335U</td>
@@ -237,6 +257,7 @@
         <td class="store-cell">PC DEPOT</td>
       </tr>
       <tr data-rank="A" data-price="144800" data-pm="22118" data-wt="1.175" data-judge="△条件付き">
+        <td class="img-cell"><img src="assets/thumb/25.jpg" alt="" loading="lazy"></td>
         <td class="price-cell">¥144,800</td>
         <td class="name-cell"><b>NEC</b> LAVIE Smart N13 Slim SE33E<span class="m">PC-SE32B48D3-D</span></td>
         <td class="cpu-cell">Ryzen 7 7735HS</td>
@@ -247,6 +268,7 @@
         <td class="store-cell">NTT-X(OCN)</td>
       </tr>
       <tr data-rank="A" data-price="144800" data-pm="19649" data-wt="99" data-judge="◎推奨">
+        <td class="img-cell"><img src="assets/thumb/28.jpg" alt="" loading="lazy"></td>
         <td class="price-cell">¥144,800</td>
         <td class="name-cell"><b>DELL</b> Dell 14 (Ryzen AI 5 340)<span class="m">MCL54-FHHB</span></td>
         <td class="cpu-cell">Ryzen AI 5 340</td>
@@ -257,6 +279,7 @@
         <td class="store-cell">楽天市場</td>
       </tr>
       <tr data-rank="B" data-price="148000" data-pm="13735" data-wt="1.197" data-judge="◎推奨">
+        <td class="img-cell"><img src="assets/thumb/3.jpg" alt="" loading="lazy"></td>
         <td class="price-cell">¥148,000</td>
         <td class="name-cell"><b>NEC</b> LAVIE SOL S1355/LAB<span class="m">PC-S1355LAB</span></td>
         <td class="cpu-cell">Core i5-1335U</td>
@@ -267,6 +290,7 @@
         <td class="store-cell">ジョーシン</td>
       </tr>
       <tr data-rank="C" data-price="148000" data-pm="12388" data-wt="99" data-judge="◎推奨">
+        <td class="img-cell"><span class="noimg"></span></td>
         <td class="price-cell">¥148,000</td>
         <td class="name-cell"><b>FUJITSU</b> LIFEBOOK AH45/J3<span class="m">AH45/J3</span></td>
         <td class="cpu-cell">Core i5-1235U</td>
@@ -277,6 +301,7 @@
         <td class="store-cell">ジョーシン</td>
       </tr>
       <tr data-rank="C" data-price="153780" data-pm="12721" data-wt="1.47" data-judge="◎推奨">
+        <td class="img-cell"><img src="assets/thumb/22.jpg" alt="" loading="lazy"></td>
         <td class="price-cell">¥153,780</td>
         <td class="name-cell"><b>LENOVO</b> IdeaPad Slim 5 Gen 10<span class="m">83HX00CVJP</span></td>
         <td class="cpu-cell">Ryzen AI 5 330</td>
@@ -287,6 +312,7 @@
         <td class="store-cell">ケーズデンキ</td>
       </tr>
       <tr data-rank="C" data-price="154364" data-pm="12721" data-wt="1.88" data-judge="◎推奨">
+        <td class="img-cell"><img src="assets/thumb/14.jpg" alt="" loading="lazy"></td>
         <td class="price-cell">¥154,364</td>
         <td class="name-cell"><b>ASUS</b> Vivobook 16<span class="m">M1607KA-AI5165WS3</span></td>
         <td class="cpu-cell">Ryzen AI 5 330</td>
@@ -297,6 +323,7 @@
         <td class="store-cell">ジョーシン</td>
       </tr>
       <tr data-rank="B" data-price="154800" data-pm="13027" data-wt="1.187" data-judge="△条件付き">
+        <td class="img-cell"><img src="assets/thumb/4.jpg" alt="" loading="lazy"></td>
         <td class="price-cell">¥154,800</td>
         <td class="name-cell"><b>FUJITSU</b> FMV Note C CZ-K1<span class="m">FMVCZSK1MA</span></td>
         <td class="cpu-cell">Core Ultra 5 134U</td>
@@ -307,6 +334,7 @@
         <td class="store-cell">ジョーシン</td>
       </tr>
       <tr data-rank="B" data-price="154800" data-pm="13027" data-wt="1.187" data-judge="△条件付き">
+        <td class="img-cell"><img src="assets/thumb/5.jpg" alt="" loading="lazy"></td>
         <td class="price-cell">¥154,800</td>
         <td class="name-cell"><b>FUJITSU</b> FMV Note C CZ-K1<span class="m">FMVCZSK1EA</span></td>
         <td class="cpu-cell">Core Ultra 5 134U</td>
@@ -317,6 +345,7 @@
         <td class="store-cell">ジョーシン</td>
       </tr>
       <tr data-rank="B" data-price="154800" data-pm="13027" data-wt="1.187" data-judge="△条件付き">
+        <td class="img-cell"><img src="assets/thumb/10.jpg" alt="" loading="lazy"></td>
         <td class="price-cell">¥154,800</td>
         <td class="name-cell"><b>FUJITSU</b> FMV Note C CZ-K1<span class="m">FMVCZSK1SA</span></td>
         <td class="cpu-cell">Core Ultra 5 134U</td>
@@ -327,6 +356,7 @@
         <td class="store-cell">ジョーシン</td>
       </tr>
       <tr data-rank="C" data-price="155333" data-pm="12721" data-wt="1.47" data-judge="◎推奨">
+        <td class="img-cell"><img src="assets/thumb/9.jpg" alt="" loading="lazy"></td>
         <td class="price-cell">¥155,333</td>
         <td class="name-cell"><b>LENOVO</b> IdeaPad Slim 5 Gen 10<span class="m">83HX00CVJP</span></td>
         <td class="cpu-cell">Ryzen AI 5 330</td>
@@ -337,6 +367,7 @@
         <td class="store-cell">ジョーシン</td>
       </tr>
       <tr data-rank="C" data-price="158000" data-pm="12914" data-wt="99" data-judge="◎推奨">
+        <td class="img-cell"><span class="noimg"></span></td>
         <td class="price-cell">¥158,000</td>
         <td class="name-cell"><b>FUJITSU</b> LIFEBOOK AH51/J3 (Joshinオリジナル)<span class="m">AH51/J3</span></td>
         <td class="cpu-cell">Core i7-1255U</td>
@@ -347,6 +378,7 @@
         <td class="store-cell">ジョーシン</td>
       </tr>
       <tr data-rank="B" data-price="159280" data-pm="15032" data-wt="1.72" data-judge="◎推奨">
+        <td class="img-cell"><img src="assets/thumb/23.jpg" alt="" loading="lazy"></td>
         <td class="price-cell">¥159,280</td>
         <td class="name-cell"><b>ACER</b> Aspire Lite 15<span class="m">AL15-42P-H56Y/F</span></td>
         <td class="cpu-cell">Ryzen 5 7430U</td>
@@ -357,6 +389,7 @@
         <td class="store-cell">ケーズデンキ</td>
       </tr>
       <tr data-rank="C" data-price="159800" data-pm="12721" data-wt="1.46" data-judge="◎推奨">
+        <td class="img-cell"><img src="assets/thumb/31.jpg" alt="" loading="lazy"></td>
         <td class="price-cell">¥159,800</td>
         <td class="name-cell"><b>ASUS</b> Vivobook 14 M1407<span class="m">M1407KA-AI5165WS3</span></td>
         <td class="cpu-cell">Ryzen AI 5 330</td>
@@ -367,6 +400,7 @@
         <td class="store-cell">ASUS公式</td>
       </tr>
       <tr data-rank="B" data-price="164800" data-pm="13813" data-wt="99" data-judge="△条件付き">
+        <td class="img-cell"><span class="noimg"></span></td>
         <td class="price-cell">¥164,800</td>
         <td class="name-cell"><b>ASUS</b> Vivobook 17<span class="m">X1704VA-AU121WS</span></td>
         <td class="cpu-cell">Core i7-1355U</td>
@@ -377,6 +411,7 @@
         <td class="store-cell">ビックカメラ</td>
       </tr>
       <tr data-rank="B" data-price="169800" data-pm="18111" data-wt="99" data-judge="◎推奨">
+        <td class="img-cell"><span class="noimg"></span></td>
         <td class="price-cell">¥169,800</td>
         <td class="name-cell"><b>HP</b> Pavilion 16-ag0000 G1<span class="m">A1KY7PA-AABD</span></td>
         <td class="cpu-cell">Ryzen 5 8540U</td>
@@ -387,6 +422,7 @@
         <td class="store-cell">ジョーシン</td>
       </tr>
       <tr data-rank="B" data-price="169800" data-pm="18111" data-wt="99" data-judge="◎推奨">
+        <td class="img-cell"><span class="noimg"></span></td>
         <td class="price-cell">¥169,800</td>
         <td class="name-cell"><b>HP</b> Pavilion 16 価格.com限定<span class="m">Pavilion 16(ブルー/タッチ)</span></td>
         <td class="cpu-cell">Ryzen 5 8540U</td>
@@ -397,6 +433,7 @@
         <td class="store-cell">ジョーシン</td>
       </tr>
       <tr data-rank="C" data-price="169800" data-pm="12721" data-wt="1.88" data-judge="◎推奨">
+        <td class="img-cell"><img src="assets/thumb/19.jpg" alt="" loading="lazy"></td>
         <td class="price-cell">¥169,800</td>
         <td class="name-cell"><b>ASUS</b> Vivobook 16<span class="m">M1607KA-AI5165W3</span></td>
         <td class="cpu-cell">Ryzen AI 5 330</td>
@@ -407,6 +444,7 @@
         <td class="store-cell">ビックカメラ</td>
       </tr>
       <tr data-rank="C" data-price="169800" data-pm="12721" data-wt="1.7" data-judge="◎推奨">
+        <td class="img-cell"><img src="assets/thumb/32.jpg" alt="" loading="lazy"></td>
         <td class="price-cell">¥169,800</td>
         <td class="name-cell"><b>ASUS</b> Vivobook S16 M3607<span class="m">M3607KA-AI5165GRS</span></td>
         <td class="cpu-cell">Ryzen AI 5 330</td>
@@ -417,6 +455,7 @@
         <td class="store-cell">ASUS公式</td>
       </tr>
       <tr data-rank="C" data-price="170280" data-pm="12388" data-wt="1.68" data-judge="×除外">
+        <td class="img-cell"><img src="assets/thumb/20.jpg" alt="" loading="lazy"></td>
         <td class="price-cell">¥170,280</td>
         <td class="name-cell"><b>FUJITSU</b> FMV LIFEBOOK PH50/J3<span class="m">FMVP50J3H</span></td>
         <td class="cpu-cell">Core i5-1235U</td>
@@ -427,6 +466,7 @@
         <td class="store-cell">ビックカメラ</td>
       </tr>
       <tr data-rank="C" data-price="199818" data-pm="12721" data-wt="1.4" data-judge="×除外">
+        <td class="img-cell"><img src="assets/thumb/11.jpg" alt="" loading="lazy"></td>
         <td class="price-cell">¥199,818</td>
         <td class="name-cell"><b>ASUS</b> Vivobook S 14<span class="m">M3407KA-AI5165GRS</span></td>
         <td class="cpu-cell">Ryzen AI 5 330</td>
@@ -455,6 +495,7 @@
 <footer>
   データ出典：価格.com（各機種のスペック・PassMark・Office詳細）、各販売店の商品ページ。<br>
   PassMarkは価格.com掲載のCPUスコアで、同一CPUなら機種が違っても同値です。<br>
+  製品画像は各メーカー／販売店が公開している製品写真です（一部は同シリーズの外観で代用、画像なしの機種は枠のみ）。<br>
   2026年11月25日作成。価格・在庫は変動するので購入前に各店で確認してください。
 </footer>
 </div>
