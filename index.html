@@ -290,7 +290,7 @@
         <td class="pm-cell"><span class="badge ra">A</span> 23,136</td>
         <td>1.78kg</td>
         <td>15.6″</td>
-        <td>1000GB</td>
+        <td>1TB</td>
         <td class="store-cell">ジョーシン</td>
       </tr>
       <tr class="row" data-no="24" data-rank="C" data-price="129800" data-pm="10936" data-wt="2.2" data-ssd="512" data-judge="◎推奨">
@@ -312,7 +312,7 @@
         <td class="pm-cell"><span class="badge rb">B</span> 15,032</td>
         <td>1.72kg</td>
         <td>15.6″</td>
-        <td>1000GB</td>
+        <td>1TB</td>
         <td class="store-cell">ジョーシン</td>
       </tr>
       <tr class="row" data-no="16" data-rank="B" data-price="139800" data-pm="16273" data-wt="1.49" data-ssd="512" data-judge="△条件付き">
@@ -681,7 +681,9 @@ function openDetail(no){
   document.getElementById('mmem').textContent=(d.mem||'—')+'GB（ふつうに使うなら十分）';
   const g=Number(d.ssd)||0;
   const pcount=Math.round(g*1024/3/1000)*1000;
-  document.getElementById('mssd').textContent=g+'GB（写真なら約'+pcount.toLocaleString('ja-JP')+'枚。スマホの'+(g/256).toFixed(g%256?1:0)+'倍）';
+  const cap=(g>=1000?(g/1000)+'TB':g+'GB');
+  const mult=(g>256)?'。スマホの'+(g/256).toFixed(1)+'倍':'';
+  document.getElementById('mssd').textContent=cap+'（写真なら約'+pcount.toLocaleString('ja-JP')+'枚'+mult+'）';
   document.getElementById('minch').textContent=(d.inch||'—')+'インチ';
   const wv=Number(d.wt);
   document.getElementById('mwt').textContent=w2(d.wt)+(wv>0?(wv<1.5?'（毎日持ち歩ける軽さ）':wv<1.7?'（持ち歩きはふつう）':'（据え置き向き）'):'');
