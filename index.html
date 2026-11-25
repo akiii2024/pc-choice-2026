@@ -70,6 +70,21 @@
   .notes ul{margin:0;padding-left:1.2em}
   .notes li{margin:9px 0;font-size:.88rem;color:#cbd8e4}
 
+
+  .gloss{margin:26px 0 8px}
+  .gloss h2{font-size:1.1rem;margin:0 0 12px}
+  .gcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+  .g{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 14px}
+  .gt{font-weight:700;font-size:.92rem;margin-bottom:5px}
+  .gt span{font-weight:400;color:var(--dim);font-size:.72rem;margin-left:5px}
+  .gd{font-size:.82rem;color:#c2ccd6;line-height:1.6}
+  .gd b{color:var(--fg)}
+  .gm{margin-top:7px;font-size:.76rem;color:var(--acc);font-weight:600}
+  .gnote{margin:12px 0 0;font-size:.82rem;color:var(--dim);background:#131a21;border:1px solid var(--line);
+    border-radius:10px;padding:10px 12px;line-height:1.6}
+  .gnote b{color:var(--fg)}
+  th .th{font-weight:400;font-size:.68rem;color:#7b8a99}
+  .plain{margin:8px 0 0;font-size:.82rem;color:#cdd8e2;background:#101a22;border-radius:8px;padding:8px 10px;line-height:1.6}
   .row{cursor:pointer} .row:hover{background:#1b2530}
   .pick{cursor:pointer} .pick:hover{border-color:#2d3d4d}
   .modal{position:fixed;inset:0;z-index:50;display:none}
@@ -141,6 +156,27 @@
 
 <h2>この4台から選べばOK</h2>
 <p class="sub">上から順に「性能」「14型」「軽さ」「無難」の4択。どれも予算内です。</p>
+
+<section class="gloss">
+  <h2>はじめての人へ（この4つだけ分かればOK）</h2>
+  <div class="gcards">
+    <div class="g"><div class="gt">SSD<span>エスエスディー</span></div>
+      <div class="gd">写真や動画を<b>保存しておく場所</b>。引き出しの大きさだと思ってください。<br>
+      256GB＝スマホと同じくらい／512GB＝その2倍／1TB＝4倍</div>
+      <div class="gm">動画やゲームを入れるなら 512GB以上</div></div>
+    <div class="g"><div class="gt">メモリ</div>
+      <div class="gd"><b>作業机の広さ</b>。広いほど、同時にたくさん開いても固まりにくい。<br>
+      このページの29台は<b>全部16GB</b>なので心配いりません（8GB機は除外済み）</div></div>
+    <div class="g"><div class="gt">CPU（速さ）</div>
+      <div class="gd"><b>頭の回転の速さ</b>。下の表の数字（PassMark）が大きいほど速い。<br>
+      20,000以上＝速い／13,000台＝ふつう／10,000台＝安い割にがんばる</div></div>
+    <div class="g"><div class="gt">重さ</div>
+      <div class="gd">毎日カバンに入れるなら<b>1.5kg未満</b>が快適。1.8kgを超えると据え置き向きです。</div></div>
+  </div>
+  <p class="gnote">Office（Word・Excel・PowerPoint）は<b>29台すべてに付属</b>（買い切りの2024年版、追加料金なし）。
+  ネット・YouTube・レポート作成・Zoomはどれでも余裕。3Dゲームは向きません。</p>
+</section>
+
 <div class="picks">
 
     <article class="pick a" data-no="12" role="button" tabindex="0">
@@ -150,6 +186,7 @@
       <div class="model">AL15-72P-N76ZHARE/F</div>
       <div class="price"><span>¥</span>129,800<small>税込</small></div>
       <div class="specs">i7-13620H / 性能A(23,136) / 16GB / 1TB / 15.6型 / 1.78kg</div>
+      <p class="plain">速さ：29台中いちばん。容量1TBでいちばん安い。ただし1.78kgなので、毎日持ち歩くには重め。</p>
       <p class="why">この中でCPUが最速で、SSDも1TB。予算17万に対して4万円以上残る。重さ1.78kgが許せるなら第一候補。</p>
     </article>
     <article class="pick a" data-no="28" role="button" tabindex="0">
@@ -159,6 +196,7 @@
       <div class="model">MCL54-FHHB</div>
       <div class="price"><span>¥</span>144,800<small>税込</small></div>
       <div class="specs">Ryzen AI 5 340 / 性能A(19,649) / 16GB / 512GB / 14型 / 1.52kg</div>
+      <p class="plain">速さ：2番目。1.52kgで持ち歩けて、14型で画面も見やすい。いちばんバランスがいい。</p>
       <p class="why">Dell 14 Plus (DB14255)。14型1.52kgでPassMark 19,649は破格。楽天市場 144,800で買える（Qoo10の139,800は一般セラーなので使わない）。</p>
     </article>
     <article class="pick a" data-no="25" role="button" tabindex="0">
@@ -168,6 +206,7 @@
       <div class="model">PC-SE32B48D3-D</div>
       <div class="price"><span>¥</span>144,800<small>税込</small></div>
       <div class="specs">Ryzen 7 7735HS / 性能A(22,118) / 16GB / 256GB / 13.3型 / 1.175kg</div>
+      <p class="plain">速さ：3番目。1.18kgで軽い。ただし保存容量が256GB（写真中心なら十分、動画を入れるなら外付けが必要）。</p>
       <p class="why">1.18kgでPassMark 22,118。持ち運ぶなら本命。SSDが256GBなので外付けSSD（1万円）前提。</p>
     </article>
     <article class="pick b" data-no="3" role="button" tabindex="0">
@@ -177,6 +216,7 @@
       <div class="model">PC-S1355LAB</div>
       <div class="price"><span>¥</span>148,000<small>税込</small></div>
       <div class="specs">i5-1335U / 性能B(13,735) / 16GB / 512GB / 13.3型タッチ / 1.197kg</div>
+      <p class="plain">保存容量512GBで1.20kg。軽いのに容量もある、いいとこ取り。</p>
       <p class="why">1.20kgで512GB。軽さと容量を両立したいならこれ。13.3型タッチで2025年10月発売、11/30までセール。</p>
     </article>
 </div>
@@ -207,7 +247,7 @@
 </div>
 <div class="tbl-wrap">
 <table id="tbl">
-  <thead><tr><th></th><th>価格</th><th>機種 / 型番</th><th>CPU</th><th>性能</th><th>重量</th><th>画面</th><th>SSD</th><th>店</th></tr></thead>
+  <thead><tr><th></th><th>価格</th><th>機種 / 型番</th><th>CPU</th><th>速さ<br><span class="th">PassMark</span></th><th>重さ</th><th>画面</th><th>保存<br><span class="th">SSD</span></th><th>店</th></tr></thead>
   <tbody>
       <tr class="row" data-no="1" data-rank="C" data-price="109800" data-pm="10696" data-wt="1.72" data-ssd="256" data-judge="△条件付き">
         <td class="img-cell"><img src="assets/thumb/1.jpg" alt="" loading="lazy"></td>
@@ -564,11 +604,11 @@
       <table class="spec">
         <tr><th>メーカー</th><td id="mmaker"></td></tr>
         <tr><th>CPU</th><td id="mcpu"></td></tr>
-        <tr><th>性能</th><td id="mpm"></td></tr>
+        <tr><th>速さ</th><td id="mpm"></td></tr>
         <tr><th>メモリ</th><td id="mmem"></td></tr>
-        <tr><th>SSD</th><td id="mssd"></td></tr>
+        <tr><th>保存<br><span class="th">SSD</span></th><td id="mssd"></td></tr>
         <tr><th>画面</th><td id="minch"></td></tr>
-        <tr><th>重量</th><td id="mwt"></td></tr>
+        <tr><th>重さ</th><td id="mwt"></td></tr>
         <tr><th>Office</th><td id="moffice"></td></tr>
         <tr><th>発売</th><td id="myr"></td></tr>
       </table>
@@ -637,11 +677,14 @@ function openDetail(no){
   document.getElementById('mprice').textContent='¥'+Number(d.price||0).toLocaleString('ja-JP');
   document.getElementById('mstore').textContent='税込 / '+d.store;
   document.getElementById('mcpu').textContent=d.cpu||'—';
-  document.getElementById('mpm').textContent=(d.pm?Number(d.pm).toLocaleString('ja-JP')+' 点（性能'+(d.rank||'-')+'）':'—');
-  document.getElementById('mmem').textContent=(d.mem||'—')+'GB';
-  document.getElementById('mssd').textContent=(d.ssd||'—')+'GB';
+  document.getElementById('mpm').textContent=(d.pm?Number(d.pm).toLocaleString('ja-JP')+' 点（性能'+(d.rank||'-')+'／数字が大きいほど速い）':'—');
+  document.getElementById('mmem').textContent=(d.mem||'—')+'GB（ふつうに使うなら十分）';
+  const g=Number(d.ssd)||0;
+  const ph=Math.round(g*1024/3/1000)*1000;
+  document.getElementById('mssd').textContent=g+'GB（写真なら約'+ph.toLocaleString('ja-JP')+'枚。スマホの'+(g/256).toFixed(g%256?1:0)+'倍）';
   document.getElementById('minch').textContent=(d.inch||'—')+'インチ';
-  document.getElementById('mwt').textContent=w2(d.wt);
+  const wv=Number(d.wt);
+  document.getElementById('mwt').textContent=w2(d.wt)+(wv>0?(wv<1.5?'（毎日持ち歩ける軽さ）':wv<1.7?'（持ち歩きはふつう）':'（据え置き向き）'):'');
   document.getElementById('moffice').textContent=(d.office||'—')+(d.ver?'（価格.com一致: '+d.ver+'）':'');
   document.getElementById('myr').textContent=(d.yr&&d.yr!=='-')?d.yr+'年':'—';
   const jb=document.getElementById('mjudge');
