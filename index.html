@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Office永年版つきノートPC 候補29台｜2026年11月</title>
+<meta name="description" content="予算17万円・Office Home &amp; Business 2024（永続版）つきノートPC 29台をCPU性能(PassMark)で比較。値段・重さ・型番つき。">
+<style>
+  :root{
+    --bg:#0f1216; --card:#171c22; --line:#2a323c; --fg:#e8edf3; --dim:#9aa7b4;
+    --acc:#4ade80; --acc2:#38bdf8; --warn:#fbbf24; --ng:#94a3b8;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP","Yu Gothic UI",Meiryo,sans-serif;
+    line-height:1.7;-webkit-text-size-adjust:100%}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+  header{padding:44px 0 28px;border-bottom:1px solid var(--line)}
+  h1{font-size:clamp(1.4rem,4.6vw,2.1rem);margin:0 0 10px;letter-spacing:.01em}
+  .lead{color:var(--dim);margin:0;font-size:.95rem}
+  .cond{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .cond span{background:#1e2731;border:1px solid var(--line);border-radius:999px;
+    padding:5px 13px;font-size:.8rem;color:#cfe0ee}
+  h2{font-size:1.15rem;margin:44px 0 6px;display:flex;align-items:center;gap:9px}
+  h2::before{content:"";width:4px;height:19px;background:var(--acc2);border-radius:2px}
+  .sub{color:var(--dim);font-size:.86rem;margin:0 0 18px}
+  .picks{display:grid;gap:14px;grid-template-columns:1fr}
+  @media(min-width:720px){.picks{grid-template-columns:1fr 1fr}}
+  .pick{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+  .pick.a{border-color:#2f7d54}
+  .pick .tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;color:#0b1210;
+    background:var(--acc);border-radius:6px;padding:3px 9px;font-weight:700}
+  .pick.b .tag{background:var(--warn)}
+  .pick h3{margin:12px 0 2px;font-size:1.12rem}
+  .pick .model{color:var(--dim);font-size:.78rem;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  .pick .price{font-size:2rem;font-weight:800;letter-spacing:-.02em;margin:10px 0 4px}
+  .pick .price span{font-size:1.1rem;margin-right:2px}
+  .pick .price small{font-size:.72rem;color:var(--dim);margin-left:6px;font-weight:500}
+  .pick .specs{font-size:.82rem;color:#bcd0e0;padding:8px 0 10px;border-top:1px dashed var(--line)}
+  .pick .why{margin:0;font-size:.88rem;color:#cbd8e4}
+  .steps{display:grid;gap:12px;margin-top:8px}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:.9rem}
+  .step b{color:var(--acc2)}
+  .tools{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 10px;align-items:center}
+  .tools button{background:#1e2731;color:#d6e2ee;border:1px solid var(--line);border-radius:999px;
+    padding:7px 15px;font-size:.82rem;cursor:pointer;font-family:inherit}
+  .tools button.on{background:var(--acc2);color:#08131c;border-color:var(--acc2);font-weight:700}
+  .tools .count{color:var(--dim);font-size:.8rem;margin-left:auto}
+  table{width:100%;border-collapse:collapse;font-size:.84rem;margin-top:6px}
+  th,td{padding:9px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+  th{color:var(--dim);font-weight:600;font-size:.76rem;position:sticky;top:0;background:#12171d;white-space:nowrap}
+  tbody tr:hover{background:#1b2229}
+  .price-cell{white-space:nowrap;font-weight:700}
+  .name-cell b{font-size:.72rem;color:var(--dim);text-transform:uppercase;letter-spacing:.04em;display:block}
+  .m{display:block;color:#7f8fa0;font-size:.72rem;font-family:ui-monospace,Menlo,monospace}
+  .cpu-cell{font-size:.78rem;color:#b9c9d8;min-width:120px}
+  .badge{display:inline-block;width:17px;height:17px;line-height:17px;text-align:center;
+    border-radius:5px;font-size:.7rem;font-weight:800;color:#0b1210}
+  .badge.ra{background:var(--acc)} .badge.rb{background:var(--warn)} .badge.rc{background:#64748b;color:#e6edf3}
+  .store-cell{font-size:.76rem;color:var(--dim);white-space:nowrap}
+  .notes{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-top:14px}
+  .notes ul{margin:0;padding-left:1.2em}
+  .notes li{margin:9px 0;font-size:.88rem;color:#cbd8e4}
+  .notes b{color:var(--warn)}
+  footer{margin:52px 0 40px;padding-top:20px;border-top:1px solid var(--line);
+    color:var(--dim);font-size:.78rem}
+  .tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+  @media(max-width:700px){
+    .cpu-cell,.store-cell{display:none}
+    th:nth-child(3),td:nth-child(3),th:nth-child(8),td:nth-child(8){display:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Office永年版つきノートPC 候補29台</h1>
+  <p class="lead">2026年11月25日時点。予算17万円・Office Home &amp; Business 2024（買い切り）つきの実機候補を、
+  値段ではなく<b>CPU性能（PassMark）</b>で並べ直した比較ページです。</p>
+  <div class="cond">
+    <span>予算 17万円</span>
+    <span>Office 2024 永続版つき</span>
+    <span>メモリ16GB以上</span>
+    <span>29台（Qoo10の一般セラーと8GB機は除外）</span>
+  </div>
+</header>
+
+<h2>この4台から選べばOK</h2>
+<p class="sub">上から順に「性能」「14型」「軽さ」「無難」の4択。どれも予算内です。</p>
+<div class="picks">
+
+    <article class="pick a">
+      <div class="tag">性能がいちばん</div>
+      <h3>acer Aspire Lite 15</h3>
+      <div class="model">AL15-72P-N76ZHARE/F</div>
+      <div class="price"><span>¥</span>129,800<small>税込</small></div>
+      <div class="specs">i7-13620H / 性能A(23,136) / 16GB / 1TB / 15.6型 / 1.78kg</div>
+      <p class="why">この中でCPUが最速で、SSDも1TB。予算17万に対して4万円以上残る。重さ1.78kgが許せるなら第一候補。</p>
+    </article>
+    <article class="pick a">
+      <div class="tag">14型・性能A</div>
+      <h3>Dell 14</h3>
+      <div class="model">MCL54-FHHB</div>
+      <div class="price"><span>¥</span>144,800<small>税込</small></div>
+      <div class="specs">Ryzen AI 5 340 / 性能A(19,649) / 16GB / 512GB / 14型</div>
+      <p class="why">14型でこの性能は破格。ただしQoo10の139,800は保証の記載がない一般セラー。楽天144,800かディーライズ149,800（延長保証あり）で買う。</p>
+    </article>
+    <article class="pick a">
+      <div class="tag">軽い・性能A</div>
+      <h3>NEC LAVIE Smart N13 Slim</h3>
+      <div class="model">PC-SE32B48D3-D</div>
+      <div class="price"><span>¥</span>144,800<small>税込</small></div>
+      <div class="specs">Ryzen 7 7735HS / 性能A(22,118) / 16GB / 256GB / 13.3型 / 1.175kg</div>
+      <p class="why">1.18kgでPassMark 22,118。持ち運ぶなら本命。SSDが256GBなので外付けSSD（1万円）前提。</p>
+    </article>
+    <article class="pick b">
+      <div class="tag">無難・軽め</div>
+      <h3>NEC LAVIE N15 Slim N1555</h3>
+      <div class="model">PC-N1555GAB2</div>
+      <div class="price"><span>¥</span>144,700<small>税込</small></div>
+      <div class="specs">i5-1335U / 性能B(13,735) / 16GB / 512GB / 15.6型 / 1.65kg</div>
+      <p class="why">性能はBだが1.65kgで15.6型、2025年10月発売、国内メーカー。性能より安心を取るならこれ。</p>
+    </article>
+</div>
+
+<h2>どう選ぶか（3分岐）</h2>
+<div class="steps">
+  <div class="step"><b>1. 持ち運ぶ？</b>　毎日カバンに入れる → NEC LAVIE Smart N13 Slim（1.18kg）、たまに → NEC N15 Slim（1.65kg）、据え置き → acer Aspire Lite 15（1.78kg・1TB）</div>
+  <div class="step"><b>2. 重い作業をする？</b>　動画編集・ゲーム・大量のExcel計算 → 性能Aの3台（acer / Dell 14 / NEC N13）に絞る。Word・Excel・Webだけなら性能Bで十分</div>
+  <div class="step"><b>3. Officeは永続版が必要？</b>　どうしても買い切りが必要ならこの29台。Microsoft 365の2年版でよいなら選択肢は何倍にも増えます</div>
+</div>
+
+<h2>全29台の比較表</h2>
+<p class="sub">性能A＝PassMark 19,000以上／B＝13,000〜18,999／C＝13,000未満。スマホでは横にスクロールできます。</p>
+<div class="tools">
+  <button class="on" data-f="all">すべて</button>
+  <button data-f="A">性能A</button>
+  <button data-f="B">性能B</button>
+  <button data-f="u15">15万円以内</button>
+  <button data-f="light">1.7kg未満</button>
+  <button data-f="sort-price">安い順</button>
+  <button data-f="sort-pm">性能順</button>
+  <span class="count" id="count">29台</span>
+</div>
+<div class="tbl-wrap">
+<table id="tbl">
+  <thead><tr><th>価格</th><th>機種 / 型番</th><th>CPU</th><th>性能</th><th>重量</th><th>画面</th><th>SSD</th><th>店</th></tr></thead>
+  <tbody>
+      <tr data-rank="C" data-price="109800" data-pm="10696" data-wt="1.72" data-judge="△条件付き">
+        <td class="price-cell">¥109,800</td>
+        <td class="name-cell"><b>ACER</b> Aspire Lite 15<span class="m">AL15-41P-H36UJARE/F</span></td>
+        <td class="cpu-cell">Ryzen 3 5400U</td>
+        <td class="pm-cell"><span class="badge rc">C</span> 10,696</td>
+        <td>1.72kg</td>
+        <td>15.6″</td>
+        <td>256GB</td>
+        <td class="store-cell">ジョーシン</td>
+      </tr>
+      <tr data-rank="B" data-price="119800" data-pm="16273" data-wt="1.55" data-judge="△条件付き">
+        <td class="price-cell">¥119,800</td>
+        <td class="name-cell"><b>LENOVO</b> IdeaPad Slim 3x Gen 10<span class="m">83N3001KJP</span></td>
+        <td class="cpu-cell">Snapdragon X X1-26-100</td>
+        <td class="pm-cell"><span class="badge rb">B</span> 16,273</td>
+        <td>1.55kg</td>
+        <td>15.3″</td>
+        <td>512GB</td>
+        <td class="store-cell">ジョーシン</td>
+      </tr>
+      <tr data-rank="B" data-price="126947" data-pm="16273" data-wt="1.55" data-judge="△条件付き">
+        <td class="price-cell">¥126,947</td>
+        <td class="name-cell"><b>LENOVO</b> IdeaPad Slim 3x Gen 10<span class="m">83N3001KJP</span></td>
+        <td class="cpu-cell">Snapdragon X X1-26-100</td>
+        <td class="pm-cell"><span class="badge rb">B</span> 16,273</td>
+        <td>1.55kg</td>
+        <td>15.3″</td>
+        <td>512GB</td>
+        <td class="store-cell">ケーズデンキ</td>
+      </tr>
+      <tr data-rank="A" data-price="129800" data-pm="23136" data-wt="1.78" data-judge="◎推奨">
+        <td class="price-cell">¥129,800</td>
+        <td class="name-cell"><b>ACER</b> Aspire Lite 15<span class="m">AL15-72P-N76ZHARE/F</span></td>
+        <td class="cpu-cell">Core i7-13620H</td>
+        <td class="pm-cell"><span class="badge ra">A</span> 23,136</td>
+        <td>1.78kg</td>
+        <td>15.6″</td>
+        <td>1000GB</td>
+        <td class="store-cell">ジョーシン</td>
+      </tr>
+      <tr data-rank="C" data-price="129800" data-pm="10936" data-wt="2.2" data-judge="◎推奨">
+        <td class="price-cell">¥129,800</td>
+        <td class="name-cell"><b>NEC</b> LAVIE N16 N1635/KAW<span class="m">PC-N1635KAW</span></td>
+        <td class="cpu-cell">Core i3-1315U</td>
+        <td class="pm-cell"><span class="badge rc">C</span> 10,936</td>
+        <td>2.2kg</td>
+        <td>16″</td>
+        <td>512GB</td>
+        <td class="store-cell">PC DEPOT</td>
+      </tr>
+      <tr data-rank="B" data-price="134800" data-pm="15032" data-wt="1.72" data-judge="◎推奨">
+        <td class="price-cell">¥134,800</td>
+        <td class="name-cell"><b>ACER</b> Aspire Lite 15<span class="m">AL15-42P-H56ZJARE/F</span></td>
+        <td class="cpu-cell">Ryzen 5 7430U</td>
+        <td class="pm-cell"><span class="badge rb">B</span> 15,032</td>
+        <td>1.72kg</td>
+        <td>15.6″</td>
+        <td>1000GB</td>
+        <td class="store-cell">ジョーシン</td>
+      </tr>
+      <tr data-rank="B" data-price="139800" data-pm="16273" data-wt="1.49" data-judge="△条件付き">
+        <td class="price-cell">¥139,800</td>
+        <td class="name-cell"><b>ASUS</b> Vivobook 14<span class="m">X1407QA-PU165W</span></td>
+        <td class="cpu-cell">Snapdragon X X1-26-100</td>
+        <td class="pm-cell"><span class="badge rb">B</span> 16,273</td>
+        <td>1.49kg</td>
+        <td>14″</td>
+        <td>512GB</td>
+        <td class="store-cell">ビックカメラ</td>
+      </tr>
+      <tr data-rank="C" data-price="142780" data-pm="12967" data-wt="99" data-judge="◎推奨">
+        <td class="price-cell">¥142,780</td>
+        <td class="name-cell"><b>DELL</b> Dell 15 DC15250<span class="m">ND65-GHM3BK</span></td>
+        <td class="cpu-cell">Core i5-1334U</td>
+        <td class="pm-cell"><span class="badge rc">C</span> 12,967</td>
+        <td>—</td>
+        <td>15.6″</td>
+        <td>512GB</td>
+        <td class="store-cell">ヤマダ</td>
+      </tr>
+      <tr data-rank="B" data-price="144700" data-pm="13735" data-wt="1.65" data-judge="◎推奨">
+        <td class="price-cell">¥144,700</td>
+        <td class="name-cell"><b>NEC</b> LAVIE N15 Slim N1555/GAB2<span class="m">PC-N1555GAB2</span></td>
+        <td class="cpu-cell">Core i5-1335U</td>
+        <td class="pm-cell"><span class="badge rb">B</span> 13,735</td>
+        <td>1.65kg</td>
+        <td>15.6″</td>
+        <td>512GB</td>
+        <td class="store-cell">PC DEPOT</td>
+      </tr>
+      <tr data-rank="A" data-price="144800" data-pm="22118" data-wt="1.175" data-judge="△条件付き">
+        <td class="price-cell">¥144,800</td>
+        <td class="name-cell"><b>NEC</b> LAVIE Smart N13 Slim SE33E<span class="m">PC-SE32B48D3-D</span></td>
+        <td class="cpu-cell">Ryzen 7 7735HS</td>
+        <td class="pm-cell"><span class="badge ra">A</span> 22,118</td>
+        <td>1.175kg</td>
+        <td>13.3″</td>
+        <td>256GB</td>
+        <td class="store-cell">NTT-X(OCN)</td>
+      </tr>
+      <tr data-rank="A" data-price="144800" data-pm="19649" data-wt="99" data-judge="◎推奨">
+        <td class="price-cell">¥144,800</td>
+        <td class="name-cell"><b>DELL</b> Dell 14 (Ryzen AI 5 340)<span class="m">MCL54-FHHB</span></td>
+        <td class="cpu-cell">Ryzen AI 5 340</td>
+        <td class="pm-cell"><span class="badge ra">A</span> 19,649</td>
+        <td>—</td>
+        <td>14″</td>
+        <td>512GB</td>
+        <td class="store-cell">楽天市場</td>
+      </tr>
+      <tr data-rank="B" data-price="148000" data-pm="13735" data-wt="1.197" data-judge="◎推奨">
+        <td class="price-cell">¥148,000</td>
+        <td class="name-cell"><b>NEC</b> LAVIE SOL S1355/LAB<span class="m">PC-S1355LAB</span></td>
+        <td class="cpu-cell">Core i5-1335U</td>
+        <td class="pm-cell"><span class="badge rb">B</span> 13,735</td>
+        <td>1.197kg</td>
+        <td>13.3″</td>
+        <td>512GB</td>
+        <td class="store-cell">ジョーシン</td>
+      </tr>
+      <tr data-rank="C" data-price="148000" data-pm="12388" data-wt="99" data-judge="◎推奨">
+        <td class="price-cell">¥148,000</td>
+        <td class="name-cell"><b>FUJITSU</b> LIFEBOOK AH45/J3<span class="m">AH45/J3</span></td>
+        <td class="cpu-cell">Core i5-1235U</td>
+        <td class="pm-cell"><span class="badge rc">C</span> 12,388</td>
+        <td>—</td>
+        <td>16″</td>
+        <td>512GB</td>
+        <td class="store-cell">ジョーシン</td>
+      </tr>
+      <tr data-rank="C" data-price="153780" data-pm="12721" data-wt="1.47" data-judge="◎推奨">
+        <td class="price-cell">¥153,780</td>
+        <td class="name-cell"><b>LENOVO</b> IdeaPad Slim 5 Gen 10<span class="m">83HX00CVJP</span></td>
+        <td class="cpu-cell">Ryzen AI 5 330</td>
+        <td class="pm-cell"><span class="badge rc">C</span> 12,721</td>
+        <td>1.47kg</td>
+        <td>14″</td>
+        <td>512GB</td>
+        <td class="store-cell">ケーズデンキ</td>
+      </tr>
+      <tr data-rank="C" data-price="154364" data-pm="12721" data-wt="1.88" data-judge="◎推奨">
+        <td class="price-cell">¥154,364</td>
+        <td class="name-cell"><b>ASUS</b> Vivobook 16<span class="m">M1607KA-AI5165WS3</span></td>
+        <td class="cpu-cell">Ryzen AI 5 330</td>
+        <td class="pm-cell"><span class="badge rc">C</span> 12,721</td>
+        <td>1.88kg</td>
+        <td>16″</td>
+        <td>512GB</td>
+        <td class="store-cell">ジョーシン</td>
+      </tr>
+      <tr data-rank="B" data-price="154800" data-pm="13027" data-wt="1.187" data-judge="△条件付き">
+        <td class="price-cell">¥154,800</td>
+        <td class="name-cell"><b>FUJITSU</b> FMV Note C CZ-K1<span class="m">FMVCZSK1MA</span></td>
+        <td class="cpu-cell">Core Ultra 5 134U</td>
+        <td class="pm-cell"><span class="badge rb">B</span> 13,027</td>
+        <td>1.187kg</td>
+        <td>13.3″</td>
+        <td>256GB</td>
+        <td class="store-cell">ジョーシン</td>
+      </tr>
+      <tr data-rank="B" data-price="154800" data-pm="13027" data-wt="1.187" data-judge="△条件付き">
+        <td class="price-cell">¥154,800</td>
+        <td class="name-cell"><b>FUJITSU</b> FMV Note C CZ-K1<span class="m">FMVCZSK1EA</span></td>
+        <td class="cpu-cell">Core Ultra 5 134U</td>
+        <td class="pm-cell"><span class="badge rb">B</span> 13,027</td>
+        <td>1.187kg</td>
+        <td>13.3″</td>
+        <td>256GB</td>
+        <td class="store-cell">ジョーシン</td>
+      </tr>
+      <tr data-rank="B" data-price="154800" data-pm="13027" data-wt="1.187" data-judge="△条件付き">
+        <td class="price-cell">¥154,800</td>
+        <td class="name-cell"><b>FUJITSU</b> FMV Note C CZ-K1<span class="m">FMVCZSK1SA</span></td>
+        <td class="cpu-cell">Core Ultra 5 134U</td>
+        <td class="pm-cell"><span class="badge rb">B</span> 13,027</td>
+        <td>1.187kg</td>
+        <td>13.3″</td>
+        <td>256GB</td>
+        <td class="store-cell">ジョーシン</td>
+      </tr>
+      <tr data-rank="C" data-price="155333" data-pm="12721" data-wt="1.47" data-judge="◎推奨">
+        <td class="price-cell">¥155,333</td>
+        <td class="name-cell"><b>LENOVO</b> IdeaPad Slim 5 Gen 10<span class="m">83HX00CVJP</span></td>
+        <td class="cpu-cell">Ryzen AI 5 330</td>
+        <td class="pm-cell"><span class="badge rc">C</span> 12,721</td>
+        <td>1.47kg</td>
+        <td>14″</td>
+        <td>512GB</td>
+        <td class="store-cell">ジョーシン</td>
+      </tr>
+      <tr data-rank="C" data-price="158000" data-pm="12914" data-wt="99" data-judge="◎推奨">
+        <td class="price-cell">¥158,000</td>
+        <td class="name-cell"><b>FUJITSU</b> LIFEBOOK AH51/J3 (Joshinオリジナル)<span class="m">AH51/J3</span></td>
+        <td class="cpu-cell">Core i7-1255U</td>
+        <td class="pm-cell"><span class="badge rc">C</span> 12,914</td>
+        <td>—</td>
+        <td>16″</td>
+        <td>512GB</td>
+        <td class="store-cell">ジョーシン</td>
+      </tr>
+      <tr data-rank="B" data-price="159280" data-pm="15032" data-wt="1.72" data-judge="◎推奨">
+        <td class="price-cell">¥159,280</td>
+        <td class="name-cell"><b>ACER</b> Aspire Lite 15<span class="m">AL15-42P-H56Y/F</span></td>
+        <td class="cpu-cell">Ryzen 5 7430U</td>
+        <td class="pm-cell"><span class="badge rb">B</span> 15,032</td>
+        <td>1.72kg</td>
+        <td>15.6″</td>
+        <td>512GB</td>
+        <td class="store-cell">ケーズデンキ</td>
+      </tr>
+      <tr data-rank="C" data-price="159800" data-pm="12721" data-wt="1.46" data-judge="◎推奨">
+        <td class="price-cell">¥159,800</td>
+        <td class="name-cell"><b>ASUS</b> Vivobook 14 M1407<span class="m">M1407KA-AI5165WS3</span></td>
+        <td class="cpu-cell">Ryzen AI 5 330</td>
+        <td class="pm-cell"><span class="badge rc">C</span> 12,721</td>
+        <td>1.46kg</td>
+        <td>14″</td>
+        <td>512GB</td>
+        <td class="store-cell">ASUS公式</td>
+      </tr>
+      <tr data-rank="B" data-price="164800" data-pm="13813" data-wt="99" data-judge="△条件付き">
+        <td class="price-cell">¥164,800</td>
+        <td class="name-cell"><b>ASUS</b> Vivobook 17<span class="m">X1704VA-AU121WS</span></td>
+        <td class="cpu-cell">Core i7-1355U</td>
+        <td class="pm-cell"><span class="badge rb">B</span> 13,813</td>
+        <td>—</td>
+        <td>17.3″</td>
+        <td>512GB</td>
+        <td class="store-cell">ビックカメラ</td>
+      </tr>
+      <tr data-rank="B" data-price="169800" data-pm="18111" data-wt="99" data-judge="◎推奨">
+        <td class="price-cell">¥169,800</td>
+        <td class="name-cell"><b>HP</b> Pavilion 16-ag0000 G1<span class="m">A1KY7PA-AABD</span></td>
+        <td class="cpu-cell">Ryzen 5 8540U</td>
+        <td class="pm-cell"><span class="badge rb">B</span> 18,111</td>
+        <td>—</td>
+        <td>16″</td>
+        <td>512GB</td>
+        <td class="store-cell">ジョーシン</td>
+      </tr>
+      <tr data-rank="B" data-price="169800" data-pm="18111" data-wt="99" data-judge="◎推奨">
+        <td class="price-cell">¥169,800</td>
+        <td class="name-cell"><b>HP</b> Pavilion 16 価格.com限定<span class="m">Pavilion 16(ブルー/タッチ)</span></td>
+        <td class="cpu-cell">Ryzen 5 8540U</td>
+        <td class="pm-cell"><span class="badge rb">B</span> 18,111</td>
+        <td>—</td>
+        <td>16″</td>
+        <td>512GB</td>
+        <td class="store-cell">ジョーシン</td>
+      </tr>
+      <tr data-rank="C" data-price="169800" data-pm="12721" data-wt="1.88" data-judge="◎推奨">
+        <td class="price-cell">¥169,800</td>
+        <td class="name-cell"><b>ASUS</b> Vivobook 16<span class="m">M1607KA-AI5165W3</span></td>
+        <td class="cpu-cell">Ryzen AI 5 330</td>
+        <td class="pm-cell"><span class="badge rc">C</span> 12,721</td>
+        <td>1.88kg</td>
+        <td>16″</td>
+        <td>512GB</td>
+        <td class="store-cell">ビックカメラ</td>
+      </tr>
+      <tr data-rank="C" data-price="169800" data-pm="12721" data-wt="1.7" data-judge="◎推奨">
+        <td class="price-cell">¥169,800</td>
+        <td class="name-cell"><b>ASUS</b> Vivobook S16 M3607<span class="m">M3607KA-AI5165GRS</span></td>
+        <td class="cpu-cell">Ryzen AI 5 330</td>
+        <td class="pm-cell"><span class="badge rc">C</span> 12,721</td>
+        <td>1.7kg</td>
+        <td>16″</td>
+        <td>512GB</td>
+        <td class="store-cell">ASUS公式</td>
+      </tr>
+      <tr data-rank="C" data-price="170280" data-pm="12388" data-wt="1.68" data-judge="×除外">
+        <td class="price-cell">¥170,280</td>
+        <td class="name-cell"><b>FUJITSU</b> FMV LIFEBOOK PH50/J3<span class="m">FMVP50J3H</span></td>
+        <td class="cpu-cell">Core i5-1235U</td>
+        <td class="pm-cell"><span class="badge rc">C</span> 12,388</td>
+        <td>1.68kg</td>
+        <td>16″</td>
+        <td>256GB</td>
+        <td class="store-cell">ビックカメラ</td>
+      </tr>
+      <tr data-rank="C" data-price="199818" data-pm="12721" data-wt="1.4" data-judge="×除外">
+        <td class="price-cell">¥199,818</td>
+        <td class="name-cell"><b>ASUS</b> Vivobook S 14<span class="m">M3407KA-AI5165GRS</span></td>
+        <td class="cpu-cell">Ryzen AI 5 330</td>
+        <td class="pm-cell"><span class="badge rc">C</span> 12,721</td>
+        <td>1.4kg</td>
+        <td>14″</td>
+        <td>512GB</td>
+        <td class="store-cell">ジョーシン</td>
+      </tr>
+  </tbody>
+</table>
+</div>
+
+<h2>買う前の注意</h2>
+<div class="notes">
+<ul>
+  <li><b>価格は2026年11月25日時点。</b>セール価格は数日で戻ります。特にNEC N16（ページ表記129,700）とNEC N13（NTT-X表記131,637）は表示が揺れるので購入直前に再確認を。</li>
+  <li><b>Qoo10の「一般セラー」は避ける。</b>Dell 14（MCL54-FHHB）はQoo10に139,800の出品がありますが、販売元が一般セラーで保証の記載がありません。同じ型番が楽天144,800／ディーライズ149,800（延長保証あり）／Amazon149,700で買えます。差額5,000円で保証を捨てるのは損です。</li>
+  <li><b>Snapdragon X（ARM）の3台は要注意。</b>Office 2024は動きますが、x86用の会計ソフト・年賀状ソフト・古いプリンタドライバが動かないことがあります。特殊なソフトを使うなら避けてください。</li>
+  <li><b>256GBは1年で厳しくなる。</b>OfficeとWindows更新だけで40GB以上使います。写真や動画を入れるなら512GB以上、または外付けSSD（1万円）を前提に。</li>
+  <li><b>同じ「i7」でも性能は1.7倍違う。</b>i7-13620H＝23,136、i7-1355U＝13,813。型番の数字まで見てください。Ryzen AI 5 330（12,721）はRyzen 5 7430U（15,032）より遅いです。</li>
+  <li><b>重量が「—」の機種</b>はメーカー非公開または未取得です（Dell、HP Pavilion 16、Vivobook 17など）。</li>
+</ul>
+</div>
+
+<footer>
+  データ出典：価格.com（各機種のスペック・PassMark・Office詳細）、各販売店の商品ページ。<br>
+  PassMarkは価格.com掲載のCPUスコアで、同一CPUなら機種が違っても同値です。<br>
+  2026年11月25日作成。価格・在庫は変動するので購入前に各店で確認してください。
+</footer>
+</div>
+<script>
+const tbody=document.querySelector('#tbl tbody');
+const rows=[...tbody.rows];
+const cnt=document.getElementById('count');
+const btns=[...document.querySelectorAll('.tools button')];
+let filter='all';
+function apply(){
+  let shown=0;
+  rows.forEach(r=>{
+    const p=+r.dataset.price, pm=+r.dataset.pm, w=+r.dataset.wt, rk=r.dataset.rank;
+    let ok=true;
+    if(filter==='A'||filter==='B') ok=(rk===filter);
+    else if(filter==='u15') ok=(p<=150000);
+    else if(filter==='light') ok=(w<1.7);
+    r.style.display=ok?'':'none';
+    if(ok) shown++;
+  });
+  cnt.textContent=shown+'台';
+}
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  if(f==='sort-price'||f==='sort-pm'){
+    const key=f==='sort-price'?'price':'pm';
+    rows.sort((a,b2)=>+a.dataset[key]-+b2.dataset[key]);
+    if(key==='pm') rows.reverse();
+    rows.forEach(r=>tbody.appendChild(r));
+    btns.forEach(x=>x.classList.remove('on')); b.classList.add('on');
+    return;
+  }
+  filter=f;
+  btns.forEach(x=>{if(!x.dataset.f.startsWith('sort'))x.classList.remove('on')});
+  b.classList.add('on');
+  apply();
+}));
+</script>
+</body>
+</html>
