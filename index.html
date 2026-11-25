@@ -75,6 +75,12 @@
   footer{margin:52px 0 40px;padding-top:20px;border-top:1px solid var(--line);
     color:var(--dim);font-size:.78rem}
   .tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+  @media(max-width:480px){
+    .cpu-cell,.store-cell{display:none}
+    th:nth-child(7),td:nth-child(7),th:nth-child(8),td:nth-child(8){display:none}
+    table{font-size:.8rem} th,td{padding:7px 5px}
+    .img-cell{width:44px} .img-cell img,.noimg{width:38px;height:30px}
+  }
   @media(max-width:700px){
     .cpu-cell,.store-cell{display:none}
     th:nth-child(8),td:nth-child(8){display:none}
@@ -140,7 +146,7 @@
 
 <h2>どう選ぶか（3分岐）</h2>
 <div class="steps">
-  <div class="step"><b>1. 持ち運ぶ？</b>　毎日カバンに入れる → NEC LAVIE Smart N13 Slim（1.18kg）、たまに → NEC N15 Slim（1.65kg）、据え置き → acer Aspire Lite 15（1.78kg・1TB）</div>
+  <div class="step"><b>1. 持ち運ぶ？</b>　毎日カバンに入れる → NEC LAVIE Smart N13 Slim（1.18kg・256GB）か NEC LAVIE SOL S1355/LAB（1.20kg・512GB）、たまに → Dell 14 Plus（1.52kg）か ASUS Vivobook 14（1.49kg）、据え置き → acer Aspire Lite 15（1.78kg・1TB）</div>
   <div class="step"><b>2. 重い作業をする？</b>　動画編集・ゲーム・大量のExcel計算 → 性能Aの3台（acer / Dell 14 / NEC N13）に絞る。Word・Excel・Webだけなら性能Bで十分</div>
   <div class="step"><b>3. Officeは永続版が必要？</b>　どうしても買い切りが必要ならこの29台。Microsoft 365の2年版でよいなら選択肢は何倍にも増えます</div>
 </div>
