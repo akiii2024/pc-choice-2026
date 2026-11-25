@@ -548,6 +548,33 @@
   2026年11月25日作成。価格・在庫は変動するので購入前に各店で確認してください。
 </footer>
 </div>
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="mback"></div>
+  <div class="mcard" role="dialog" aria-modal="true">
+    <button class="mclose" id="mclose" aria-label="閉じる">&times;</button>
+    <div class="mimg"><img id="mi" alt=""><div id="mnoimg" class="noimg big">画像なし</div></div>
+    <div class="mbody">
+      <span class="badge" id="mjudge"></span>
+      <h3 id="mname"></h3>
+      <div class="mmodel" id="mmodel"></div>
+      <div class="mprice"><span id="mprice"></span><span class="store" id="mstore"></span></div>
+      <table class="spec">
+        <tr><th>メーカー</th><td id="mmaker"></td></tr>
+        <tr><th>CPU</th><td id="mcpu"></td></tr>
+        <tr><th>性能</th><td id="mpm"></td></tr>
+        <tr><th>メモリ</th><td id="mmem"></td></tr>
+        <tr><th>SSD</th><td id="mssd"></td></tr>
+        <tr><th>画面</th><td id="minch"></td></tr>
+        <tr><th>重量</th><td id="mwt"></td></tr>
+        <tr><th>Office</th><td id="moffice"></td></tr>
+        <tr><th>発売</th><td id="myr"></td></tr>
+      </table>
+      <div class="mnote" id="mnote"></div>
+      <a class="mbtn" id="mlink" target="_blank" rel="noopener noreferrer">販売ページを開く →</a>
+      <div class="mhint">※価格は2026年11月25日時点。在庫・価格は変わります。</div>
+    </div>
+  </div>
+</div>
 <script>
 const tbody=document.querySelector('#tbl tbody');
 const rows=[...tbody.rows];
@@ -639,32 +666,5 @@ document.querySelector('.mback').addEventListener('click',closeModal);
 document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeModal(); });
 </script>
 
-<div class="modal" id="modal" aria-hidden="true">
-  <div class="mback"></div>
-  <div class="mcard" role="dialog" aria-modal="true">
-    <button class="mclose" id="mclose" aria-label="閉じる">&times;</button>
-    <div class="mimg"><img id="mi" alt=""><div id="mnoimg" class="noimg big">画像なし</div></div>
-    <div class="mbody">
-      <span class="badge" id="mjudge"></span>
-      <h3 id="mname"></h3>
-      <div class="mmodel" id="mmodel"></div>
-      <div class="mprice"><span id="mprice"></span><span class="store" id="mstore"></span></div>
-      <table class="spec">
-        <tr><th>メーカー</th><td id="mmaker"></td></tr>
-        <tr><th>CPU</th><td id="mcpu"></td></tr>
-        <tr><th>性能</th><td id="mpm"></td></tr>
-        <tr><th>メモリ</th><td id="mmem"></td></tr>
-        <tr><th>SSD</th><td id="mssd"></td></tr>
-        <tr><th>画面</th><td id="minch"></td></tr>
-        <tr><th>重量</th><td id="mwt"></td></tr>
-        <tr><th>Office</th><td id="moffice"></td></tr>
-        <tr><th>発売</th><td id="myr"></td></tr>
-      </table>
-      <div class="mnote" id="mnote"></div>
-      <a class="mbtn" id="mlink" target="_blank" rel="noopener noreferrer">販売ページを開く →</a>
-      <div class="mhint">※価格は2026年11月25日時点。在庫・価格は変わります。</div>
-    </div>
-  </div>
-</div>
 </body>
 </html>
