@@ -682,7 +682,7 @@ function openDetail(no){
   const g=Number(d.ssd)||0;
   const pcount=Math.round(g*1024/3/1000)*1000;
   const cap=(g>=1000?(g/1000)+'TB':g+'GB');
-  const mult=(g>256)?'。スマホの'+(g/256).toFixed(1)+'倍':'';
+  const ratio=g/256; const mult=(g>256)?'。スマホの'+(Number.isInteger(ratio)?ratio:ratio.toFixed(1))+'倍':'';
   document.getElementById('mssd').textContent=cap+'（写真なら約'+pcount.toLocaleString('ja-JP')+'枚'+mult+'）';
   document.getElementById('minch').textContent=(d.inch||'—')+'インチ';
   const wv=Number(d.wt);
